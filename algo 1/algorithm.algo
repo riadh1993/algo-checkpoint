@@ -1,0 +1,28 @@
+ALGORITHM prog
+VAR
+    sentence:=STRING;
+    sumwords:INTEGER:=0;
+    leng:INTEGER:=0;
+    i:integer:=0;
+    countspace:integer:=0;
+    countvowels:integer:=0;
+BEGIN
+
+     FOR i FROM 1 TO sentence.(length-1) STEP step  DO
+            leng:= leng + i
+            
+        END_FOR
+        FOR i FROM 1 TO sentence.(length-1) STEP step  DO
+            if sentence[i] = "" then
+            countspace:=countspace + 1
+            sumwords:=leng - countspace
+        END_FOR
+        FOR i FROM 1 TO sentence.(length-1) STEP step  DO
+            if sentence[i] =  {'a', 'e', 'i', 'o', 'u' } then
+            countvowels:=countvowels + 1
+        END_FOR
+        write(sumwords)
+        write(leng)
+        write(countvowels)
+        
+END
